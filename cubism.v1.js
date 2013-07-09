@@ -38,7 +38,7 @@ cubism.context = function() {
     var now = Date.now();
     stop0 = new Date(Math.floor((now - serverDelay - clientDelay + shift) / step) * step);
     start0 = new Date(stop0 - size * step);
-    stop1 = new Date(Math.floor((now - serverDelay) / step + shift) * step);
+    stop1 = new Date(Math.floor((now - serverDelay + shift) / step) * step);
     start1 = new Date(stop1 - size * step);
     scale.domain([start0, stop0]);
     return context;
