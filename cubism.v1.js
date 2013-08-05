@@ -152,7 +152,8 @@ cubism.context = function() {
         break;
       default: return;
     }
-    d3.event.preventDefault();
+    // Was causing the issue with arrow keys not being responsive in input fields
+    // d3.event.preventDefault();
   });
 
   return update();
